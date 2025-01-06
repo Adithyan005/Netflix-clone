@@ -59,9 +59,13 @@ const Movie_Page = () => {
           <div className="px-6 ms-4 mt-8 text-lg w-[70vw] ">
             <p className="text-justify">{description}</p>
           </div>
-          <div className="flex gap-5 ms-4 px-6 mt-7 items-center">
+          <div className="flex gap-5 ms-4 px-6 mt-6 items-center">
             <h1 className="text-xl font-semibold">Director</h1>
             <p className="text-cyan-600 text-lg">{director}</p>
+          </div>
+          <div className="flex gap-5 ms-4 px-6 mt-6 items-center">
+          <h1 className="text-xl font-semibold">Cast</h1>
+          <p className="text-cyan-600 text-lg">{cast}</p>
           </div>
         </div>
       </div>
