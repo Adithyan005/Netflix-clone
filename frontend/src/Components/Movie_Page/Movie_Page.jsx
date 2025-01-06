@@ -46,7 +46,7 @@ const Movie_Page = () => {
             <div>
               <h1>Your Rating</h1>
               <div className="flex gap-1 items-center justify-center">
-                <img src={wstar} alt="" className="w-7" />
+                <img src={wstar} alt="" className="w-6" />
                 <p>Rate</p>
               </div>
             </div>
