@@ -52,11 +52,11 @@ const Movie_Page = () => {
             </div>
           </div>
         </div>
-        <div className="mt-7 px-6 ms-4">
-          <img src={image} alt="" className="w-[35vw]" />
+        <div className="mt-5 px-6 ms-4">
+          <img src={image} alt="" className="w-[37vw]" />
         </div>
         <div className="font-stylish">
-          <div className="px-6 ms-4 mt-8 text-lg w-[70vw] ">
+          <div className="px-6 ms-4 mt-6 text-lg w-[70vw] ">
             <p className="text-justify">{description}</p>
           </div>
           <div className="flex gap-5 ms-4 px-6 mt-6 items-center">
