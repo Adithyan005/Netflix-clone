@@ -13,10 +13,10 @@ const Movie_Page = () => {
     <div className="text-white">
       <div className="flex justify-between items-center">
         <div className="ms-4 px-6 py-4">
-          <img src={logo} alt="" className="w-[5rem]" />
+          <img src={logo} alt="" className="w-[6rem]" />
         </div>
         <div>
-          <ul className="flex gap-4 px-6 me-4 py-4">
+          <ul className="flex gap-4 px-6 me-4 py-4 font-robo font-semibold text-lg">
             <li>
               <a href="#">Cast & Crew</a>
             </li>

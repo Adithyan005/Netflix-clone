@@ -27,7 +27,7 @@ const Home = () => {
             pre-independent Bombay, living with his maternal uncle and aunt
             after the death of his mother.
           </p>
-          <div className="pt-5 flex gap-7">
+          <div className="pt-5 flex gap-5">
             <div className="bg-white w-[6rem] font-stylish text-xs font-bold h-8 flex justify-center items-center hover:bg-[#ffffffbf]">
               <img src={play} alt="" className="w-9" />
               <p>Play</p>
