@@ -1,11 +1,33 @@
-import React from "react";
-import card_data from "../Cards_Data/Cards_Data";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Title_Card = (props) => {
+  const [data, setdata] = useState([]);
+  useEffect(() => {
+    async function fetchdata() {
+      try {
+        const response = await axios.get("http://localhost:4000/movies");
+        setdata(response.data);
+      } catch (error) {
+        console.log("error in the data fetch title_Card");
+      }
+    }
+    fetchdata();
+  });
   const navigate = useNavigate();
-  const handleclick = (image, name, year, director, cast, writers, rating, description) => {
-    navigate("/moviepage", { state: { image, name, year, director, cast, writers, rating,  description} });
+  const handleclick = async (movieid) => {
+    try {
+      const response = await axios.get(
+        `http://localhost:4000/movies/${movieid}`
+      );
+
+      if (response.status == 200) {
+        navigate("/moviepage", { state: { array: response.data } });
+      }
+    } catch (error) {
+      console.log("error in the obtaining data");
+    }
   };
 
   return (
@@ -14,14 +36,12 @@ const Title_Card = (props) => {
       <div className="ms-4 flex justify-center">
         <div className="scr w-[210vh] overflow-x-scroll mt-4">
           <div className="flex w-[500vh] gap-3">
-            {card_data.map((card, index) => {
+            {data.map((card, index) => {
               return (
                 <div
                   key={index}
                   className="text-white"
-                  onClick={() => {
-                    handleclick(card.image, card.name, card.year, card.director, card.cast, card.writers, card.rating, card.description);
-                  }}
+                  onClick={() => handleclick(card._id)}
                 >
                   <img
                     src={card.image}

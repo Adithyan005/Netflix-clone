@@ -2,8 +2,11 @@ import express from "express"
 import mongoose from "mongoose"
 import Movie_Model from "./models/Movie.js"
 import dotenv from "dotenv"
+import cors from 'cors'
 
-const app=express()
+var app = express()
+app.use(cors())
+
 app.use(express.json())
 
 dotenv.config()
@@ -44,12 +47,21 @@ app.get('/movies',async(req,res)=>{
     try {
         const movie=await Movie_Model.find()
         res.status(200).json(movie)
+
+    } catch (error) {
+        console.log(error)
+    }
+})
+app.get('/movies/:id',async(req,res)=>{
+    const id = req.params.id;
+    try {
+        const movie=await Movie_Model.findOne({_id:id})
+        res.status(200).json(movie)
         console.log(movie)
     } catch (error) {
         console.log(error)
     }
 })
-
 
 app.listen(port,()=>{
     console.log(`server running on port ${port}`)
