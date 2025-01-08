@@ -1,7 +1,7 @@
 [
     {
-        "bgimage":"",
-        "titleimage":"",
+        "bgimage":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/home-img/amaran.jpg",
+        "titleimage":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/home-img/title.png",
         "description":"The life of Major Mukund Varadarajan and is set against the backdrop of the Qazipathri Operation in Shopian, Kashmir, which took place back in 2014."
     }
 ]
