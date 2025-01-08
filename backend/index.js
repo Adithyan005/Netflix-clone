@@ -3,6 +3,7 @@ import mongoose from "mongoose"
 import Movie_Model from "./models/Movie.js"
 import dotenv from "dotenv"
 import cors from 'cors'
+import HomeModel from "./models/Homepage.js"
 
 var app = express()
 app.use(cors())
@@ -61,6 +62,32 @@ app.get('/movies/:id',async(req,res)=>{
         console.log(movie)
     } catch (error) {
         console.log(error)
+    }
+})
+
+app.post('/insert',async(req,res)=>{
+    const {bgimage,titleimage,description} = req.body
+    try {
+        const home = new HomeModel({
+            bgimage,
+            titleimage,
+            description
+        })
+        await home.save()
+        console.log(home)
+        res.status(200).json({"message":"successfully inserted"})
+    } catch (error) {
+        console.log("error in posting")
+    }
+})
+
+app.get('/homemovie',async(req,res)=>{
+    const home = await HomeModel.find()
+    try {
+        console.log(home)
+        res.status(200).json(home)
+    } catch (error) {
+        console.log('error fetching')
     }
 })
 

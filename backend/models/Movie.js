@@ -1,6 +1,4 @@
 import mongoose from "mongoose";
-
-
 const Movieschema = new mongoose.Schema({
     image:{
         type:"String",
