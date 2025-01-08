@@ -1,14 +1,16 @@
 [
     {
         "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/images/kungfupanda.jpg",
-        "name":"Kung Fu Panda",
-        "year":"2008",
+        "name":"Kung Fu Panda:The Dragon Knight",
+        "year":"2022",
         "duration":"1h 28m",
         "director":"Mark Osborne",
         "cast":"Jack Black, IanMcShane, Angelina Jolie",
         "writers":"Jonathan Aibel, Glenn Berger, Ethan Reiff",
         "rating":"7.6",
-        "description":"To everyone's surprise, including his own, Po, an overweight, clumsy panda, is chosen as protector of the Valley of Peace. His suitability will soon be tested as the valley's arch-enemy is on his way."
+        "description":"To everyone's surprise, including his own, Po, an overweight, clumsy panda, is chosen as protector of the Valley of Peace. His suitability will soon be tested as the valley's arch-enemy is on his way.",
+        "trailerurl":"https://www.youtube.com/watch?v=MYy7oGQiSqI"
+
     },
     {
         "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/images/squidchallenge.jpg",
@@ -19,7 +21,8 @@
         "cast":"Jennie Kwan, Nick Martineau, Phill Cain",
         "writers":"Hwang Dong-hyuk",
         "rating":"5.8",
-        "description":"Follows contestants as they compete in challenges based on the Korean children's games featured on the Squid Game to win a $4.56 million cash prize."
+        "description":"Follows contestants as they compete in challenges based on the Korean children's games featured on the Squid Game to win a $4.56 million cash prize.",
+        "trailerurl":"https://www.youtube.com/watch?v=9rIqPtNZmaU"
     },
     {
         "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/images/jawan.jpg",
@@ -30,7 +33,8 @@
         "cast":"Shah Rukh Khan, Nayanthara, Vijay Sethupathi, Yogi Babu",
         "writers":"Atlee, Ramanagirivasan, Sumit Arora",
         "rating":"6.9",
-        "description":"A prison warden recruits inmates to commit outrageous crimes that shed light on corruption and injustice - and that lead him to an unexpected reunion."
+        "description":"A prison warden recruits inmates to commit outrageous crimes that shed light on corruption and injustice - and that lead him to an unexpected reunion.",
+        "trailerurl":"https://www.youtube.com/watch?v=MWOlnZSnXJo"
     },
     {
         "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/images/the-ghost.jpg",
@@ -41,7 +45,8 @@
         "cast":"Nagarjuna Akkineni, Sonal Chauhan, Gul Panag",
         "writers":"Ali Lucknowi, Abhijeeth Poondla, Praveen Sattaru",
         "rating":"5.1",
-        "description":"An ex-Interpol officer wreaks havoc and sends shock waves across the global underworld but goes missing in action, only to remerge years later, for his beloved family."
+        "description":"An ex-Interpol officer wreaks havoc and sends shock waves across the global underworld but goes missing in action, only to remerge years later, for his beloved family.",
+        "trailerurl":"https://www.youtube.com/watch?v=o6TOax_-A6w"
     },
     {
         "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/images/aod.jpg",
@@ -52,7 +57,8 @@
         "cast":"Park Ji-hu, Yoon Chan-young, Cho Yi-hyun",
         "writers":"Seong-il Cheon",
         "rating":"7.5",
-        "description":"A high school becomes ground zero for a zombie virus outbreak. Trapped students must fight their way out or turn into one of the rabid infected."
+        "description":"A high school becomes ground zero for a zombie virus outbreak. Trapped students must fight their way out or turn into one of the rabid infected.",
+        "trailerurl":"https://www.youtube.com/watch?v=IN5TD4VRcSM"
     },
     {
         "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/images/sarkar.jpg",
@@ -63,7 +69,8 @@
         "cast":"Joseph Vijay, Keerthy Suresh, Yogi Babu",
         "writers":"Jayamohan, AR Murugadoss, Krish Thirukumaran",
         "rating":"6.7",
-        "description":"An NRI businessman learns his vote has been cast by someone else and decides to investigate the matter, eventually finding himself pitted against two corrupt politicians."
+        "description":"An NRI businessman learns his vote has been cast by someone else and decides to investigate the matter, eventually finding himself pitted against two corrupt politicians.",
+        "trailerurl":"https://www.youtube.com/watch?v=VkkyaodksT4"
     },
     {
         "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/images/baywatch.jpg",
@@ -74,7 +81,8 @@
         "cast":"Dwayne Johnson, Mitch Buchannon, Priyanka Chopra",
         "writers":"Michael Berk, Douglas Schwartz, Gregory J. Bonann",
         "rating":"5.5",
-        "description":"Devoted lifeguard Mitch Buchannon butts heads with a brash new recruit, as they uncover a criminal plot that threatens the future of the bay."
+        "description":"Devoted lifeguard Mitch Buchannon butts heads with a brash new recruit, as they uncover a criminal plot that threatens the future of the bay.",
+        "trailerurl":"https://www.youtube.com/watch?v=eyKOgnaf0BU"
     },
     {
         "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/images/meiyazhagan.jpg",
@@ -85,7 +93,8 @@
         "cast":"Karthi, Arvind Swamy, Sri Divya",
         "writers":"C. Prem Kumar",
         "rating":"8.4",
-        "description":"A man's life is changed when he bumps into someone from his hometown in this moving Tamil-language drama; gentle scenes are occasionally punctuated by sporting threat and recollections of violence."
+        "description":"A man's life is changed when he bumps into someone from his hometown in this moving Tamil-language drama; gentle scenes are occasionally punctuated by sporting threat and recollections of violence.",
+        "trailerurl":"https://www.youtube.com/watch?v=YGJOcMtnG1Q"
     },
     {
         "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/images/sinamika.jpg",
@@ -96,7 +105,8 @@
         "cast":"Dulquer Salmaan, Aditi Rao Hydari, Kajal Aggarwal",
         "writers":"Karkibava, Madhan Karky",
         "rating":"6.3",
-        "description":"The lives of Mouna, a weather scientist who falls in love with Yaazhan, a quirky and loving guy. What happens to their relationship after a couple of years and how things take an unexpected turn after the arrival of Malarvizhi?"
+        "description":"The lives of Mouna, a weather scientist who falls in love with Yaazhan, a quirky and loving guy. What happens to their relationship after a couple of years and how things take an unexpected turn after the arrival of Malarvizhi?",
+        "trailerurl":"https://www.youtube.com/watch?v=l6Yarg2FMeI"
     },
     {
         "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/images/doctor.jpg",
@@ -107,7 +117,8 @@
         "cast":"Sivakarthikeyan, Priyanka Arulmohan, Vinay Rai",
         "writers":"Nelson DileepKumar, Surbhi Sehgal",
         "rating":"7.4",
-        "description":"When his fiancee's niece is kidnapped, a stoic army doctor and his motley team launch a rescue operation in which they need both wit and their wits."
+        "description":"When his fiancee's niece is kidnapped, a stoic army doctor and his motley team launch a rescue operation in which they need both wit and their wits.",
+        "trailerurl":"https://www.youtube.com/watch?v=oQiH_Iw0kDs"
     },
     {
         "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/images/jagamethandhiram.jpg",
@@ -118,7 +129,8 @@
         "cast":"Dhanush, James Cosmo, Aishwarya Lekshmi",
         "writers":"Nick Bain, K.N. Vijay Kumar, Karthik Subbaraj",
         "rating":"5.8",
-        "description":"A nomadic gangster finds himself caught between good and evil in a fight for a place to call home. Starring Dhanush, Aishwarya Lekshmi and James Cosmo."
+        "description":"A nomadic gangster finds himself caught between good and evil in a fight for a place to call home. Starring Dhanush, Aishwarya Lekshmi and James Cosmo.",
+        "trailerurl":"https://www.youtube.com/watch?v=2OtgYcd83Qg&t=81s"
     }
 ]
 

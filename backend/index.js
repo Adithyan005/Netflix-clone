@@ -22,7 +22,7 @@ try {
 }
 
 app.post('/moviepage/insert',async(req,res)=>{
-    const {image,name,year,duration,director,cast,writers,rating,description}=req.body
+    const {image,name,year,duration,director,cast,writers,rating,description,trailerurl}=req.body
     try {
         const movie=new Movie_Model({
             image,
@@ -33,7 +33,8 @@ app.post('/moviepage/insert',async(req,res)=>{
             cast,
             writers,
             rating,
-            description
+            description,
+            trailerurl
         })
         await movie.save()
         res.status(200).json({"message":"successfully inserted"})
