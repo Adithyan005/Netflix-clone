@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar"
+import Navbar from "../Navbar/Navbar";
 import maharaj from "../../assets/maharaj.jpg";
 import mahr from "../../assets/mahr.png";
 import play from "../../assets/play.png";
@@ -39,17 +39,17 @@ const Home = () => {
           </div>
           <div>
             <div>
-              <Title_Card title={"Popular on Netflix"}/>
+              <Title_Card title={"Popular on Netflix"} />
             </div>
           </div>
         </div>
       </div>
-        <div className="mt-[5rem] pl-4 ms-2">
-        <Title_Card title={"Blockbuster Movies"}/>
-        <Title_Card title={"Only on Netflix"}/>
-        <Title_Card title={"Upcoming"}/>
-        <Title_Card title={"Top Picks for you"}/>
-        </div>
+      <div className="mt-[5rem] pl-4 ms-2">
+        <Title_Card title={"Blockbuster Movies"} />
+        <Title_Card title={"Only on Netflix"} />
+        <Title_Card title={"Upcoming"} />
+        <Title_Card title={"Top Picks for you"} />
+      </div>
     </div>
   );
 };
