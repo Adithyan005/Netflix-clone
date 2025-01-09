@@ -15,12 +15,21 @@ const Hmpage = () => {
     homedata();
   });
 
+  const bgstyle={
+    width:"90vw",
+    height:"100vh",
+    backgroundPosition:"center",
+    backgroundSize:"cover"
+  }
+
   return (
     <div>
       {home.map((data, index) => {
         return (
           <div key={index} className="text-white w-[90vw] h-[100vh]">
+            <div style={bgstyle}>
             <img src={data.bgimage} alt="" />
+            </div>
             <img src={data.titleimage} alt="" />
             <p>{data.description}</p>
           </div>
