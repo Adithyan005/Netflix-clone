@@ -32,7 +32,7 @@ const Title_Card = (props) => {
 
   return (
     <div className="text-white font-stylish text-md">
-      <h1 className="text-xl mt-8 font-semibold">{props.title}</h1>
+      <h1 className="text-xl mt-8 font-semibold ">{props.title}</h1>
       <div className="ms-4 flex justify-center">
         <div className="scr w-[210vh] overflow-x-scroll mt-4">
           <div className="flex w-[500vh] gap-3">
