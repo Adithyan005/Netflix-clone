@@ -13,7 +13,6 @@ app.use(express.json())
 dotenv.config()
 const mongourl="mongodb+srv://adithyanm22cse:YFMUMJIpsCJrbXP2@cluster0.kwm0w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 const port=process.env.port || 4000
-const secretkey=process.env.adi123
 
 mongoose.connect(mongourl)
 try {

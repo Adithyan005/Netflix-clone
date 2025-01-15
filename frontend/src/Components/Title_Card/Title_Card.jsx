@@ -48,7 +48,7 @@ const Title_Card = (props) => {
                     alt=""
                     className="w-[40vw] cursor-pointer"
                   />
-                  <p className="font-stylish">{card.name}</p>
+                  <p className="font-stylish text-sm">{card.name}</p>
                 </div>
               );
             })}

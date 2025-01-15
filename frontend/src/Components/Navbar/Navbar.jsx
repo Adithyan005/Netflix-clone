@@ -14,8 +14,8 @@ const Navbar = () => {
   }
 
   return (
-    <div className="bg-transparent p-5 font-stylish">
-      <div className="flex justify-around items-center">
+    <div className="bg-transparent text-white p-5 font-stylish">
+      <div className="flex justify-between items-center">
         <div className="flex justify-start items-center gap-6 ml-10">
           <img src={logo} alt="" className="w-12 md:w-28" />
           <a href="#">Home</a>

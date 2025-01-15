@@ -17,33 +17,37 @@ const Home = () => {
       }
     }
     homedata();
-  });
+  },[]);
 
   return (
-    <div >
-      <div className="">
+    <div className="relative">
+      <div className="relative">
         {home.map((card, index) => {
           return (
-            <div className="relative"
+            <div
               key={index}
               style={{
                 backgroundImage: `url(${card.bgimage})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
-                height: "135vh",
+                height: "100vh",
                 color:"black"
               }}
             >
-              <div className="absolute">
-                <Navbar/>
+              <Navbar/>
+
+              <div className="absolute top-[26vh]">
+                <img src={card.titleimage} alt="" className="w-[35vw]"/>
+                <div className="w-[45vw] ms-4 px-6 ">
+                <p className="text-white font-stylish text-justify">{card.description}</p>
+                </div>
               </div>
-              
             </div>
           );
         })}
       </div>
 
-      <div className="absolute bottom-10 left-5 grid-cols-2 top-[40vh]">
+      <div className="absolute left-8 grid-cols-2 top-[62vh]">
         <div className="pt-5 flex gap-5">
           <div className="bg-white w-[6rem] font-stylish text-xs font-bold h-8 flex justify-center items-center hover:bg-[#ffffffbf]">
             <img src={play} alt="" className="w-9" />
@@ -61,7 +65,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-[5rem] pl-4 ms-2">
+      <div className="mt-[5rem] ms-8 mb-[1rem]">
         <Title_Card title={"Blockbuster Movies"} />
         <Title_Card title={"Only on Netflix"} />
         <Title_Card title={"Upcoming"} />
