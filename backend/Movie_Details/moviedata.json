@@ -131,6 +131,18 @@
         "rating":"5.8",
         "description":"A nomadic gangster finds himself caught between good and evil in a fight for a place to call home. Starring Dhanush, Aishwarya Lekshmi and James Cosmo.",
         "trailerurl":"https://www.youtube.com/watch?v=2OtgYcd83Qg&t=81s"
+    },
+    {
+        "image":"https://raw.githubusercontent.com/Adithyan005/netflix-clone-images/refs/heads/main/home-img/kings.jpeg",
+        "name":"Kingsman The Secret Service",
+        "year":"2014",
+        "duration":"2h 9m",
+        "director":"Matthew Vaughn",
+        "cast":"Colin Firth, Taron Egerton, Samuel L.Jackson",
+        "writers":"Jane Goldman, Matthew Vaughn, Mark Millar",
+        "rating":"7.7",
+        "description":"A spy organisation recruits a promising street kid into the agency's training program, while a global threat emerges from a twisted tech genius.",
+        "trailerurl":"https://youtu.be/m4NCribDx4U?si=v2HG0FqNZPdhw8vF"
     }
 ]
 

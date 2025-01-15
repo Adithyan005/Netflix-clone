@@ -4,6 +4,7 @@ import play from "../../assets/play.png";
 import info1 from "../../assets/info1.png";
 import Title_Card from "../Title_Card/Title_Card";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [home, setHome] = useState([]);
@@ -17,35 +18,49 @@ const Home = () => {
       }
     }
     homedata();
-  },[]);
+  }, []);
+
+  const navigate = useNavigate();
+  const handleclick = async (movieid) => {
+    try {
+      const response = await axios.get(
+        `http://localhost:4000/movies/${movieid}`
+      );
+      if (response.status == 200) {
+        navigate("/moviepage", { state: { array: response.data } });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="relative">
-      <div className="relative">
-        {home.map((card, index) => {
-          return (
-            <div
-              key={index}
-              style={{
-                backgroundImage: `url(${card.bgimage})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                height: "100vh",
-                color:"black"
-              }}
-            >
-              <Navbar/>
+      {home.map((card, index) => {
+        return (
+          <div 
+            key={index}
+            style={{
+              backgroundImage: `url(${card.bgimage})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              height: "100vh",
+              color: "black",
+            }}
+          >
+            <Navbar />
 
-              <div className="absolute top-[26vh]">
-                <img src={card.titleimage} alt="" className="w-[35vw]"/>
-                <div className="w-[45vw] ms-4 px-6 ">
-                <p className="text-white font-stylish text-justify">{card.description}</p>
-                </div>
+            <div onClick={()=>handleclick(card._id)} className="absolute top-[26vh]">
+              <img src={card.titleimage} alt="" className="w-[35vw]" />
+              <div className="w-[45vw] ms-4 px-6 ">
+                <p className="text-white font-stylish text-justify">
+                  {card.description}
+                </p>
               </div>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
 
       <div className="absolute left-8 grid-cols-2 top-[62vh]">
         <div className="pt-5 flex gap-5">
@@ -58,19 +73,15 @@ const Home = () => {
             <p>More info</p>
           </div>
         </div>
-        <div>
-          <div>
-            <Title_Card title={"Popular on Netflix"}/>
-          </div>
+        <div className="mt-[5rem] ms-2 mb-[1rem]">
+          <Title_Card title={"Popular on Netflix"} />
+          <Title_Card title={"Blockbuster Movies"} />
+          <Title_Card title={"Only on Netflix"} />
+          <Title_Card title={"Upcoming"} />
+          <Title_Card title={"Top Picks for you"} />
         </div>
       </div>
-
-      <div className="mt-[5rem] ms-8 mb-[1rem]">
-        <Title_Card title={"Blockbuster Movies"} />
-        <Title_Card title={"Only on Netflix"} />
-        <Title_Card title={"Upcoming"} />
-        <Title_Card title={"Top Picks for you"} />
-      </div>
+      
     </div>
   );
 };
