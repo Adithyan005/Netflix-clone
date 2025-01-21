@@ -9,6 +9,9 @@ const HomeSchema = new mongoose.Schema({
     },
     description:{
         type:"String"
+    },
+    matchstring:{
+        type:"String"
     }
 })
 

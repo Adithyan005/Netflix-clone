@@ -26,11 +26,12 @@ const Home = () => {
       const response = await axios.get(
         `http://localhost:4000/movies/${movieid}`
       );
+
       if (response.status == 200) {
         navigate("/moviepage", { state: { array: response.data } });
       }
     } catch (error) {
-      console.log(error);
+      console.log("error in the obtaining data");
     }
   };
 
@@ -38,7 +39,7 @@ const Home = () => {
     <div className="relative">
       {home.map((card, index) => {
         return (
-          <div 
+          <div
             key={index}
             style={{
               backgroundImage: `url(${card.bgimage})`,
@@ -50,7 +51,7 @@ const Home = () => {
           >
             <Navbar />
 
-            <div onClick={()=>handleclick(card._id)} className="absolute top-[26vh]">
+            <div className="pt-16">
               <img src={card.titleimage} alt="" className="w-[35vw]" />
               <div className="w-[45vw] ms-4 px-6 ">
                 <p className="text-white font-stylish text-justify">
@@ -58,21 +59,25 @@ const Home = () => {
                 </p>
               </div>
             </div>
+
+            <div className="  left-8 pt-5 flex gap-5 ms-10">
+              <div
+                className="bg-white w-[6rem] font-stylish text-xs font-bold h-8 flex justify-center items-center hover:bg-[#ffffffbf]"
+                onClick={() => handleclick(card.matchstring)}
+              >
+                <img src={play} alt="" className="w-9 pointer-events-none" />
+                <button   className="cursor-pointer">Play</button>
+              </div>
+              <div className="bg-[#6d6d6eb3] text-white flex justify-center items-center font-bold gap-1 w-[6.5rem] h-8 text-xs hover:bg-[#6d6d6e66]">
+                <img src={info1} alt="" className="w-8" />
+                <p>More info</p>
+              </div>
+            </div>
           </div>
         );
       })}
 
       <div className="absolute left-8 grid-cols-2 top-[62vh]">
-        <div className="pt-5 flex gap-5">
-          <div className="bg-white w-[6rem] font-stylish text-xs font-bold h-8 flex justify-center items-center hover:bg-[#ffffffbf]">
-            <img src={play} alt="" className="w-9" />
-            <p>Play</p>
-          </div>
-          <div className="bg-[#6d6d6eb3] text-white flex justify-center items-center font-bold gap-1 w-[6.5rem] h-8 text-xs hover:bg-[#6d6d6e66]">
-            <img src={info1} alt="" className="w-8" />
-            <p>More info</p>
-          </div>
-        </div>
         <div className="mt-[5rem] ms-2 mb-[1rem]">
           <Title_Card title={"Popular on Netflix"} />
           <Title_Card title={"Blockbuster Movies"} />
@@ -81,7 +86,6 @@ const Home = () => {
           <Title_Card title={"Top Picks for you"} />
         </div>
       </div>
-      
     </div>
   );
 };

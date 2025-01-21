@@ -76,12 +76,13 @@ app.get("/movies/:id", async (req, res) => {
 });
 
 app.post("/insert", async (req, res) => {
-  const { bgimage, titleimage, description } = req.body;
+  const { bgimage, titleimage, description, matchstring } = req.body;
   try {
     const home = new HomeModel({
       bgimage,
       titleimage,
       description,
+      matchstring
     });
     await home.save();
     console.log(home);

@@ -10,6 +10,7 @@ const Login = () => {
     height: "100vh",
   };
 
+  // isAuthenticated ? navigate("/moviepage") : navigate("/login");
   return (
     <div className="text-white font-stylish">
       <div className="p-6" style={bgstyle}>
@@ -19,23 +20,23 @@ const Login = () => {
             <h1 className="text-3xl font-semibold">Sign In</h1>
           </div>
           <div className="flex flex-col justify-center items-center ">
-          <div className="pt-5">
-            <input
-              type="text"
-              placeholder="Email or Phone Number"
-              className="bg-gray-600 w-[20vw] h-10 p-5"
-            />
-          </div>
-          <div className="pt-5">
-            <input
-              type="password"
-              placeholder="Password"
-              className="bg-gray-600  w-[20vw] h-10 p-5"
-            />
-          </div>
-          <div className="pt-7">
-            <button className="bg-red-700 w-[20vw] h-10">Sign In</button>
-          </div>
+            <div className="pt-5">
+              <input
+                type="text"
+                placeholder="Email or Phone Number"
+                className="bg-gray-600 w-[20vw] h-10 p-5"
+              />
+            </div>
+            <div className="pt-5">
+              <input
+                type="password"
+                placeholder="Password"
+                className="bg-gray-600  w-[20vw] h-10 p-5"
+              />
+            </div>
+            <div className="pt-7">
+              <button className="bg-red-700 w-[20vw] h-10">Sign In</button>
+            </div>
           </div>
           <div className="ms-6 pt-1.5 flex max-w-[20vw] justify-between items-center">
             <div className="flex gap-3">
