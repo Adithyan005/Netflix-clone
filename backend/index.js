@@ -4,6 +4,7 @@ import Movie_Model from "./models/Movie.js";
 import dotenv from "dotenv";
 import cors from "cors";
 import HomeModel from "./models/Homepage.js";
+import signupmodel from "./models/Signup.js";
 
 var app = express();
 app.use(cors());
@@ -82,7 +83,7 @@ app.post("/insert", async (req, res) => {
       bgimage,
       titleimage,
       description,
-      matchstring
+      matchstring,
     });
     await home.save();
     console.log(home);
@@ -91,6 +92,7 @@ app.post("/insert", async (req, res) => {
     console.log("error in posting");
   }
 });
+
 
 app.get("/homemovie", async (req, res) => {
   const home = await HomeModel.find();
@@ -101,6 +103,41 @@ app.get("/homemovie", async (req, res) => {
     console.log("error fetching");
   }
 });
+
+app.post("/signup", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const signup = new signupmodel({
+      email,
+      password,
+    });
+    await signup.save();
+    console.log(signup);
+    res.status(200).json({ message: "Successfully inserted" });
+  } catch (error) {
+    console.log("Error in inserting");
+  }
+});
+
+app.post("/login",async(req,res)=>{
+  try {
+    const {email,password} = req.body;
+    const user = await signupmodel.findOne({email})
+
+    if (!user) {
+      return res.json({ success: false, message: "User not found" });
+    }
+  
+    if (user.password === password) {
+      return res.json({ success: true, message: "Login successful" });
+    } else {
+      return res.json({ success: false, message: "Invalid credentials" });
+    }
+
+  } catch (error) {
+    console.log(error)
+  }
+})
 
 app.listen(port, () => {
   console.log(`server running on port ${port}`);
