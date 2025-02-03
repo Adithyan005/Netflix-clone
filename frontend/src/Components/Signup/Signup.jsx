@@ -33,7 +33,7 @@ const Signup = () => {
         autoClose:3000
       })
       setTimeout(()=>{
-        navigate('/login')
+        navigate('/')
       },3500)
 
     }
@@ -80,7 +80,7 @@ const Signup = () => {
             </div>
             <div className="ms-6 pt-14 flex gap-2 pb-14">
               <h1>Already a User?</h1>
-              <a href="/login"><h1>Login</h1></a>
+              <a href="/"><h1>Login</h1></a>
             </div>
             </form>
           </div>

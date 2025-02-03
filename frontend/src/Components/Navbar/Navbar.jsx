@@ -5,11 +5,13 @@ import icon from "../../assets/icon.jpg";
 import bell from "../../assets/bell.png";
 import drop from "../../assets/drop.png";
 import { IoMdMenu } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isdropdown, setisdropdown] = useState(false);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggledrop = () => {
     setisdropdown(!isdropdown);
@@ -18,6 +20,11 @@ const Navbar = () => {
   const togglemenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const handlelogout=()=>{
+    localStorage.removeItem("isLoggedIn");
+    navigate('/');
+  }
 
   return (
     <div className="bg-transparent text-white p-5 font-stylish">
@@ -61,7 +68,7 @@ const Navbar = () => {
                 </a>
                 <a
                   href=""
-                  className="block hover:bg-blue text-sm px-2 py-1 rounded-md"
+                  className="block hover:bg-blue text-sm px-2 py-1 rounded-md" onClick={handlelogout}
                 >
                   Logout
                 </a>

@@ -25,6 +25,7 @@ const Login = () => {
         password,
       });
       if (response.data.success) {
+        localStorage.setItem("isLoggedIn","true")
         navigate("/home");
       } else {
         setError("Invalid email or password");
@@ -86,7 +87,7 @@ const Login = () => {
           <div className="ms-6 pt-10 flex gap-2 pb-3">
             <h1>New to Netflix?</h1>
             <a href="/signup">
-              <h1>Sign up now</h1>
+              <h1>Create Account</h1>
             </a>
           </div>
           <p className="max-w-[20vw] text-justify ms-6">
