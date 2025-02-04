@@ -1,0 +1,3 @@
+[submodule "Movie_Details"]
+	path = Movie_Details
+	url = https://github.com/Adithyan005/netflix-clone-images.git
