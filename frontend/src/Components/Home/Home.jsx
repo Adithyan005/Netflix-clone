@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     async function homedata() {
       try {
-        const response = await axios.get("http://localhost:4000/homemovie");
+        const response = await axios.get("https://netflix-clone-backend-vas2.onrender.com/homemovie");
         setHome(response.data);
       } catch (error) {
         console.log(error);
