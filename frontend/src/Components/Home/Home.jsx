@@ -24,7 +24,7 @@ const Home = () => {
   const handleclick = async (movieid) => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/movies/${movieid}`
+        `https://netflix-clone-backend-vas2.onrender.com/movies/${movieid}`
       );
 
       if (response.status == 200) {
