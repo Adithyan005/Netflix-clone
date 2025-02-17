@@ -4,16 +4,14 @@ A Full-Stack Netflix Clone built with **React.js, Tailwind CSS, Express.js, and 
 
 ## Demo
 
-![Netflix Clone Preview](https://your-demo-image-url.com)
+[Netflix Clone Preview]
 
-Live Demo: [Netflix Clone](https://your-live-demo-url.com)
+Live Demo: [Netflix Clone](https://thecloneflix.netlify.app/)
 
 ## Features
 
-- User Authentication (JWT-based login & registration)
+- User Authentication
 - Browse movies & TV shows
-- Search functionality
-- Add to favorites (Watchlist)
 - Responsive UI with Tailwind CSS
 - Secure API with Express.js & MongoDB
 
@@ -28,8 +26,6 @@ Live Demo: [Netflix Clone](https://your-live-demo-url.com)
 ### Backend
 - Express.js
 - MongoDB with Mongoose
-- JSON Web Token (JWT)
-- bcrypt.js for password hashing
 
 ## Installation
 
@@ -64,7 +60,7 @@ cd netflix-clone
    - Add the following:
      ```env
      MONGO_URI=your-mongodb-connection-string
-     JWT_SECRET=your-secret-key
+     
      ```
 
 4. **Start the development server**
@@ -78,12 +74,12 @@ cd netflix-clone
    **Frontend:**
    ```bash
    cd client
-   npm start
+   npm run dev
    ```
 
 5. **Visit the app in your browser**
    ```
-   http://localhost:3000
+   http://localhost:5173
    ```
 
 ## Folder Structure
