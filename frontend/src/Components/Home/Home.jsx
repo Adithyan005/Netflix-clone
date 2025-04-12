@@ -80,10 +80,10 @@ const Home = () => {
       <div className="md:absolute md:left-8  md:top-[62vh] absolute left-4 top-[73vh] ">
         <div className="md:mt-[5rem] md:ms-2 md:mb-[1rem] mt-[3rem] ms-2 mb-[2rem]">
           <Title_Card title={"Popular on Netflix"} />
-          <Title_Card title={"Blockbuster Movies"} />
-          <Title_Card title={"Only on Netflix"} />
+          
+          {/* <Title_Card title={"Only on Netflix"} />
           <Title_Card title={"Upcoming"} />
-          <Title_Card title={"Top Picks for you"} />
+          <Title_Card title={"Top Picks for you"} /> */}
         </div>
       </div>
     </div>

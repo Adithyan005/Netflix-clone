@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const Movieschema = new mongoose.Schema({
+const Movieschema = new mongoose.Schema({ //Movieschema for Popular Movies
     image:{
         type:"String",
     },
