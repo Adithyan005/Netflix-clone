@@ -36,7 +36,7 @@ const Movie_Page = () => {
 
       {/* Movie Info */}
       <div className="flex justify-between gap-3 mt-3 px-3 md:flex-row md:justify-between md:items-center md:gap-10 md:mt-5 md:px-6">
-        <div className="font-stylish">
+        <div className="font-stylish ">
           <h1 className="text-lg font-semibold md:text-2xl">{movieData.name}</h1>
           <div className="flex gap-2 text-sm md:gap-4">
             <p>{movieData.year}</p>
@@ -83,12 +83,12 @@ const Movie_Page = () => {
       </div>
 
       {/* Movie Description */}
-      <div className="font-stylish text-justify mt-7 px-3 md:px-6 md:w-[70vw]">
+      <div className="font-stylish text-justify mt-7 px-3 md:px-6 md:w-[70vw] md:divide-y md:divide-stone-100">
         <p className="tracking-wide">{movieData.description}</p>
       </div>
 
       {/* Movie Details */}
-      <div className="flex flex-col gap-5 mt-7 mb-6 px-3 text-lg md:flex-col md:gap-8 md:px-6">
+      <div className="flex flex-col gap-5 mt-7 mb-6 px-3 text-lg md:flex-col md:gap-8 md:px-6 ">
         <div className="flex items-center gap-4 text-lg ">
           <h1 className="font-semibold text-lg md:text-xl">Director</h1>
           <p className="text-cyan-500">{movieData.director}</p>
