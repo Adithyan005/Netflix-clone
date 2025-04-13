@@ -1,10 +1,10 @@
 import express from "express";
-import signupmodel from "./models/Signup.js";
-const app = express();
+import signupmodel from "../models/Signup.js";
+const router = express.Router();
 
-app.use(express.json())
+router.use(express.json())
 
-app.post("/login", async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await signupmodel.findOne({ email });
@@ -23,4 +23,4 @@ app.post("/login", async (req, res) => {
   }
 });
 
-export default app;
+export default router;

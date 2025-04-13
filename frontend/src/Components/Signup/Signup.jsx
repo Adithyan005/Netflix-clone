@@ -21,7 +21,7 @@ const Signup = () => {
     const handlesubmit = async(e) =>{
       e.preventDefault();
       try {
-        await axios.post("https://netflix-clone-backend-vas2.onrender.com/signup",{email,password})
+        await axios.post("https://netflix-clone-backend-vas2.onrender.com/api/createauth/signup",{email,password})
         setEmail("");
         setPassword("");
         console.log('inserted')

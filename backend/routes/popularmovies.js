@@ -1,8 +1,8 @@
 import express from "express"
-import Movie_Model from "./models/Movie";
-const app = express();
+import Movie_Model from "../models/Movie.js";
+const router = express.Router();
 
-app.post("/moviepage/insert", async (req, res) => {
+router.post("/moviepage/insert", async (req, res) => {
     //for popular movies
     const {
       image,
@@ -37,7 +37,7 @@ app.post("/moviepage/insert", async (req, res) => {
     }
   });
   
-  app.get("/movies", async (req, res) => {
+  router.get("/movies", async (req, res) => {
     try {
       const movie = await Movie_Model.find();
       res.status(200).json(movie);
@@ -45,7 +45,7 @@ app.post("/moviepage/insert", async (req, res) => {
       console.log(error);
     }
   });
-  app.get("/movies/:id", async (req, res) => {
+  router.get("/movies/:id", async (req, res) => {
     const id = req.params.id;
     try {
       const movie = await Movie_Model.findOne({ _id: id });
@@ -56,4 +56,4 @@ app.post("/moviepage/insert", async (req, res) => {
     }
   });
 
-  export default app;
+  export default router;

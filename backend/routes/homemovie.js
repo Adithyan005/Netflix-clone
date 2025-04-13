@@ -1,6 +1,6 @@
 import express from "express";
 const router=express.Router();
-import HomeModel from "./models/Homepage.js";
+import HomeModel from "../models/Homepage.js";
 
 router.post("/insert", async (req, res) => {
   //for home page movie

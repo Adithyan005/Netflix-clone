@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     async function homedata() {
       try {
-        const response = await axios.get("https://netflix-clone-backend-vas2.onrender.com/homemovie");
+        const response = await axios.get("https://netflix-clone-backend-vas2.onrender.com/api/home/homemovie");
         setHome(response.data);
       } catch (error) {
         console.log(error);
@@ -24,7 +24,7 @@ const Home = () => {
   const handleclick = async (movieid) => {
     try {
       const response = await axios.get(
-        `https://netflix-clone-backend-vas2.onrender.com/movies/${movieid}`
+        `https://netflix-clone-backend-vas2.onrender.com/api/home/movies/${movieid}`
       );
 
       if (response.status == 200) {

@@ -1,8 +1,8 @@
 import express from "express";
-import blockbuster_model from "./models/Blockbuster.js";
-const app = express();
+import blockbuster_model from "../models/Blockbuster.js";
+const router = express.Router();
 
-app.post("/blockbuster", async (req, res) => {
+router.post("/blockbuster", async (req, res) => {
     const {
       image,
       name,
@@ -35,7 +35,7 @@ app.post("/blockbuster", async (req, res) => {
     }
   });
   
-  app.get("/bbmovies", async (req, res) => {
+  router.get("/bbmovies", async (req, res) => {
     const blkbstrmovies = await blockbuster_model.find();
     try {
       console.log(blkbstrmovies);
@@ -46,4 +46,4 @@ app.post("/blockbuster", async (req, res) => {
     }
   });
 
-  export default app;
+  export default router;

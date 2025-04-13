@@ -19,7 +19,7 @@ const Title_Card = (props) => {
   const handleclick = async (movieid) => {
     try {
       const response = await axios.get(
-        `https://netflix-clone-backend-vas2.onrender.com/movies/${movieid}`
+        `https://netflix-clone-backend-vas2.onrender.com/api/popular/movies/${movieid}`
       );
 
       if (response.status == 200) {

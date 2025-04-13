@@ -8,7 +8,7 @@ const [block,setBlock]=useState([]);
 useEffect(()=>{
     async function fetchmovie() {
         try {
-            const response=await axios.get("http://localhost:4000/bbmovies")
+            const response=await axios.get("https://netflix-clone-backend-vas2.onrender.com/api/buster/bbmovies")
             setBlock(response.data.blkbstrmovies);
             console.log(response.data.blkbstrmovies);
         } catch (error) {
