@@ -7,7 +7,7 @@ const Title_Card = (props) => {
   useEffect(() => {
     async function fetchdata() {
       try {
-        const response = await axios.get("https://netflix-clone-backend-vas2.onrender.com/movies");
+        const response = await axios.get("https://netflix-clone-backend-vas2.onrender.com/api/popular/movies");
         setdata(response.data);
       } catch (error) {
         console.log("error in the data fetch title_Card");

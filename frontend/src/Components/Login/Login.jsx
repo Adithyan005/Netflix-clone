@@ -32,7 +32,7 @@ const Login = () => {
       }
     } catch (error) {
       setError("Error logging in");
-      console.log(error);
+      console.log("Logging error: ",error);
     }
   };
 
