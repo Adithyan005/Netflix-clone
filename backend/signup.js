@@ -17,3 +17,5 @@ app.post("/signup", async (req, res) => {
     console.log("Error in inserting");
   }
 });
+
+export default app;

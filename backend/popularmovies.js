@@ -55,3 +55,5 @@ app.post("/moviepage/insert", async (req, res) => {
       console.log(error);
     }
   });
+
+  export default app;

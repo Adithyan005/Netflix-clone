@@ -1,8 +1,8 @@
 import express from "express";
-const app = express();
+const router=express.Router();
 import HomeModel from "./models/Homepage.js";
 
-app.post("/insert", async (req, res) => {
+router.post("/insert", async (req, res) => {
   //for home page movie
   const { bgimage, titleimage, description, matchstring } = req.body;
   try {
@@ -20,7 +20,7 @@ app.post("/insert", async (req, res) => {
   }
 });
 
-app.get("/homemovie", async (req, res) => {
+router.get("/homemovie", async (req, res) => {
   const home = await HomeModel.find();
   try {
     console.log(home);
@@ -30,4 +30,4 @@ app.get("/homemovie", async (req, res) => {
   }
 });
 
-export default app;
+export default router;

@@ -1,5 +1,8 @@
 import express from "express";
+import signupmodel from "./models/Signup.js";
 const app = express();
+
+app.use(express.json())
 
 app.post("/login", async (req, res) => {
   try {
@@ -19,3 +22,5 @@ app.post("/login", async (req, res) => {
     console.log(error);
   }
 });
+
+export default app;
