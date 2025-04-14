@@ -1,14 +1,39 @@
 [
-    {
-        "image":"https://m.media-amazon.com/images/M/MV5BMGQ0OWM3OTQtMDIwNi00ZTIyLThiMjQtZTBkZTUzZWVhNzBmXkEyXkFqcGdeQWFybm8@._V1_.jpg",
-        "name":"Red Notice",
-        "year":"2021",
-        "duration":"1h 58m",
-        "director":"Rawson Marshall Thurber",
-        "cast":"Gal Gadot, Dwayne Johnson, Ryan Reynolds",
-        "writers":"Rawson Marshall Thurber",
-        "rating":"6.3",
-        "description":"In the world of international crime, an Interpol agent attempts to hunt down and capture the world's most wanted art thief.",
-        "trailerurl":"https://youtu.be/Pj0wz7zu3Ms?si=UndWw0spB2JYJ3Gd"
-    }
+  {
+    "image": "https://m.media-amazon.com/images/M/MV5BMGQ0OWM3OTQtMDIwNi00ZTIyLThiMjQtZTBkZTUzZWVhNzBmXkEyXkFqcGdeQWFybm8@._V1_.jpg",
+    "name": "Red Notice",
+    "year": "2021",
+    "duration": "1h 58m",
+    "director": "Rawson Marshall Thurber",
+    "cast": "Gal Gadot, Dwayne Johnson, Ryan Reynolds",
+    "writers": "Rawson Marshall Thurber",
+    "rating": "6.3",
+    "description": "In the world of international crime, an Interpol agent attempts to hunt down and capture the world's most wanted art thief.",
+    "trailerurl": "https://youtu.be/Pj0wz7zu3Ms?si=UndWw0spB2JYJ3Gd"
+  },
+  {
+    "image":"https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/07/Movies-like-The-Gray-Man-feature.jpg",
+    "name":"The Gray Man",
+    "year":"2022",
+    "duration":"2h 2m",
+    "director":"Anthony Russo, Joe Russo",
+    "cast":"Ryan Gosling, Ana de armas, Dhanush",
+    "writers":"Mark Greaney, Anthony Russo, Joe Russo",
+    "rating":"6.5",
+    "description":"When the CIA's top asset -- his identity known to no one -- uncovers agency secrets, he triggers a global hunt by assassins set loose by his ex-colleague.",
+    "trailerurl":"https://youtu.be/BmllggGO4pM?si=AwaKlBgVRy2D_jwb"
+  },
+  {
+    "image":"https://images.bauerhosting.com/legacy/media/5d35/b718/6933/03c5/05d4/c1e6/Uncharted.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=undefined&q=80",
+    "name":"Uncharted",
+    "year":"2022",
+    "duration":"1h 56m",
+    "director":"Ruben Fleischer",
+    "cast":"Tom Holland, Sophia Taylor Ali, Mark Wahlberg",
+    "writers":"Amy Hennig, Neil Druckmann, Josh Scherr",
+    "rating":"6.3",
+    "description":"Victor Sullivan recruits Nathan Drake to help him find the lost fortune of Ferdinand Magellan. However, they face competition from Santiago Moncada, who believes that the treasure belongs to him",
+    "trailerurl":"https://youtu.be/6ExYXqgdXcY?si=UQotBq7b7_ruwWA-"
+
+  }
 ]
