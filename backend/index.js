@@ -7,6 +7,7 @@ import blockbuster from "./routes/blockbustermovies.js"
 import loginroute from "./routes/login.js"
 import popularroute from "./routes/popularmovies.js"
 import signuproute from "./routes/signup.js"
+import onlyonflixroute from "./routes/onlynetflix.js"
 
 
 dotenv.config();
@@ -21,6 +22,8 @@ app.use("/api/buster",blockbuster);
 app.use("/api/auth",loginroute);
 app.use("/api/popular",popularroute);
 app.use("/api/createauth",signuproute);
+app.use("/api/flix",onlyonflixroute);
+
 
 app.listen(port, () => {
   console.log(`server running on port ${port}`);
