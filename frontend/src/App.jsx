@@ -4,7 +4,7 @@ import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Movie_Page from "./Components/Movie_Page/Movie_Page";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
-import Blockbuster from "./Components/Title_Card/blockbuster/Blockbuster";
+import Blockbuster from "./Components/blockbuster/Blockbuster"
 
 const App = () => {
   return (

@@ -26,25 +26,12 @@ const Blockbuster = () => {
         {block.map((data, index) => (
           <div key={index}>
             <h1>{data.name}</h1>
+            <img src={data.image} alt="" />
           </div>
         ))}
       </div>
-      <div>
-        <h1
-          onMouseEnter={() => setDrop(true)}
-          onMouseLeave={() => setDrop(false)}
-        >
-          dropdown
-        </h1>
-      </div>
-
-      {drop && (
-        <div className="flex-col gap-5 absolute top-9">
-            <h1>blockbuster</h1>
-            <h1>blockbuster</h1>
-            <h1>blockbuster</h1>
-        </div>
-      )}
+     
+      
     </div>
   );
 };
