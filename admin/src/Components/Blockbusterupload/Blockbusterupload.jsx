@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import axios from "axios"
 
-const Upload = () => {
+const Blockbusterupload = () => {
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
   const [name, setName] = useState("");
@@ -20,9 +20,8 @@ const Upload = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "https://netflix-clone-backend-vas2.onrender.com/api/adminupload/uploadmovies",
+        "https://netflix-clone-backend-vas2.onrender.com/api/buster/blockbuster",
         {
-          category,
           image,
           name,
           year,
@@ -44,35 +43,11 @@ const Upload = () => {
   return (
     <div>
       <div className="flex justify-center items-center p-4 font-medium">
-        <h1 className="text-2xl font-stylish">Upload Movies</h1>
+        <h1 className="text-2xl font-stylish">Blockbuster Movies</h1>
       </div>
       <div>
         <form onSubmit={handlesubmit}>
-          <div className="shadow-xl bg-black w-[35vw] mx-auto rounded-xl text-white">
-            <div className="p-2 flex gap-2 items-center justify-evenly">
-              <label htmlFor="">Category</label>
-              <br />
-              <label htmlFor="">
-                <input
-                  type="radio"
-                  name="category"
-                  value="opt1"
-                  checked={category === "opt1"}
-                  onChange={(e) => setCategory(e.target.value)}
-                />
-                Blockbuster <br />
-              </label>
-              <label htmlFor="">
-                <input
-                  type="radio"
-                  name="category"
-                  value="opt2"
-                  checked={category === "opt2"}
-                  onChange={(e) => setCategory(e.target.value)}
-                />
-                Only on Netflix
-              </label>
-            </div>
+          <div className="shadow-xl py-6 bg-black w-[35vw] mx-auto rounded-xl text-white">
             <div className="p-2 flex gap-3 justify-evenly">
               <label htmlFor="">Image Link</label>
               <input type="text" onChange={(e)=>setImage(e.target.value)} name="image" className="w-[20vw] h-8 p-1 border rounded-md"/>
@@ -159,7 +134,7 @@ const Upload = () => {
                 onChange={(e) => setTrailerurl(e.target.value)}
               />
             </div>
-            <div className="flex justify-center items-center py-4 ">
+            <div className="flex justify-center items-center pt-4 ">
               <button className="bg-red-600 px-3 py-1 rounded-lg">
                 Upload
               </button>
@@ -171,4 +146,4 @@ const Upload = () => {
   );
 };
 
-export default Upload;
+export default Blockbusterupload;

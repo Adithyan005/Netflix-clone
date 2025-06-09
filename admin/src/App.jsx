@@ -1,10 +1,10 @@
 import React from 'react'
-import Upload from './Components/Upload/Upload'
+import Blockbusterupload from './Components/Blockbusterupload/Blockbusterupload'
 
 const App = () => {
   return (
     <div>
-      <Upload/>
+      <Blockbusterupload/>
     </div>
   )
 }
