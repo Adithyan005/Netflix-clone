@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
+import axios from "axios"
 
 const Upload = () => {
-  const [type, setType] = useState("");
+  const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
   const [name, setName] = useState("");
   const [year, setYear] = useState("");
@@ -15,10 +16,30 @@ const Upload = () => {
 
   const fileref = useRef(null);
 
-  const handlesubmit=()=>{
-    const file=fileref.current?.values[0];
-    console.log(file)
-  }
+  const handlesubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post(
+        "https://netflix-clone-backend-vas2.onrender.com/api/adminupload/uploadmovies",
+        {
+          category,
+          image,
+          name,
+          year,
+          duration,
+          director,
+          cast,
+          writers,
+          rating,
+          description,
+          trailerurl,
+        }
+      );
+      console.log("inserted");
+    } catch (error) {
+      console.log(error)
+    }
+  };
 
   return (
     <div>
@@ -27,107 +48,121 @@ const Upload = () => {
       </div>
       <div>
         <form onSubmit={handlesubmit}>
-          <div className="bg-yellow-100">
-            <div>
+          <div className="shadow-xl bg-black w-[35vw] mx-auto rounded-xl text-white">
+            <div className="p-2 flex gap-2 items-center justify-evenly">
+              <label htmlFor="">Category</label>
+              <br />
               <label htmlFor="">
                 <input
                   type="radio"
-                  name=""
+                  name="category"
                   value="opt1"
-                  checked={type === "opt1"}
-                  onChange={(e) => setType(e.target.value)}
+                  checked={category === "opt1"}
+                  onChange={(e) => setCategory(e.target.value)}
                 />
-                Blockbuster
+                Blockbuster <br />
               </label>
               <label htmlFor="">
                 <input
                   type="radio"
-                  name=""
+                  name="category"
                   value="opt2"
-                  checked={type === "opt2"}
-                  onChange={(e) => setType(e.target.value)}
+                  checked={category === "opt2"}
+                  onChange={(e) => setCategory(e.target.value)}
                 />
                 Only on Netflix
               </label>
             </div>
-            <div>
-              <input
-                type="file"
-                placeholder="image"
-                ref={fileref}
-              />
+            <div className="p-2 flex gap-3 justify-evenly">
+              <label htmlFor="">Image Link</label>
+              <input type="text" onChange={(e)=>setImage(e.target.value)} name="image" className="w-[20vw] h-8 p-1 border rounded-md"/>
             </div>
-            <div>
+            <div className="flex p-2 gap-2 items-center justify-evenly">
+              <label htmlFor="">Name</label>
+              <br />
               <input
                 type="text"
-                placeholder="name"
-                value="name"
                 onChange={(e) => setName(e.target.value)}
+                name="name"
+                className="w-[20vw] h-8 p-1 border rounded-md"
               />
             </div>
-            <div>
+            <div className="p-2 flex gap-14 items-center justify-evenly">
+              <label htmlFor="">Year</label>
               <input
                 type="text"
-                placeholder="year"
-                value="year"
+                name="year"
+                className="w-[20vw] h-8 p-1 border rounded-md "
                 onChange={(e) => setYear(e.target.value)}
               />
             </div>
-            <div>
+            <div className="p-2 flex gap-7 items-center justify-evenly">
+              <label htmlFor="">Duration</label>
               <input
                 type="text"
-                placeholder="duration"
-                value="duration"
+                name="duration"
+                className="w-[20vw] h-8 p-1 border rounded-md"
                 onChange={(e) => setDuration(e.target.value)}
               />
             </div>
-            <div>
+            <div className="p-2 flex gap-8 items-center justify-evenly">
+              <label htmlFor="">Director</label>
               <input
                 type="text"
-                placeholder="director"
-                value="director"
+                name="director"
+                className="w-[20vw] h-8 p-1 border rounded-md"
                 onChange={(e) => setDirector(e.target.value)}
               />
             </div>
-            <div>
+            <div className="p-2 flex gap-[4.5vw] items-center justify-evenly">
+              <label htmlFor="">Cast</label>
               <input
                 type="text"
-                placeholder="cast"
-                value="cast"
+                name="cast"
+                className="w-[20vw] h-8 p-1 border rounded-md"
                 onChange={(e) => setCast(e.target.value)}
               />
             </div>
-            <div>
+            <div className="p-2 flex gap-10 items-center justify-evenly">
+              <label htmlFor="">Writers</label>
               <input
                 type="text"
-                placeholder="writers"
-                value="writers"
+                name="writers"
+                className="w-[20vw] h-8 p-1 border rounded-md"
                 onChange={(e) => setWriters(e.target.value)}
               />
             </div>
-            <div>
+            <div className="p-2 flex gap-11 items-center justify-evenly">
+              <label htmlFor="">Rating</label>
               <input
                 type="text"
-                placeholder="rating"
-                value="rating"
+                name="rating"
+                className="w-[20vw] h-8 p-1 border rounded-md"
                 onChange={(e) => setRating(e.target.value)}
               />
             </div>
-            <div>
+            <div className="p-2 flex gap-3 items-center justify-evenly">
+              <label htmlFor="">Description</label>
               <input
                 type="text"
-                placeholder="description"
-                value="description"
+                name="description"
+                className="w-[20vw] h-8 p-1 border rounded-md"
                 onChange={(e) => setDescription(e.target.value)}
               />
             </div>
-            <div>
+            <div className="p-2 flex gap-5 items-center justify-evenly">
+              <label htmlFor="">Trailer URL</label>
               <input
                 type="text"
-                placeholder="trailerurl"
-                value="trailerurl"
+                name="trailerurl"
+                className="w-[20vw] h-8 p-1 border rounded-md"
                 onChange={(e) => setTrailerurl(e.target.value)}
               />
+            </div>
+            <div className="flex justify-center items-center py-4 ">
+              <button className="bg-red-600 px-3 py-1 rounded-lg">
+                Upload
+              </button>
             </div>
           </div>
         </form>
