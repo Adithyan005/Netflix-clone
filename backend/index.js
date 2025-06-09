@@ -8,6 +8,7 @@ import loginroute from "./routes/login.js"
 import popularroute from "./routes/popularmovies.js"
 import signuproute from "./routes/signup.js"
 import onlyonflixroute from "./routes/onlynetflix.js"
+import uploadmovies from "./routes/uploadmovies.js"
 
 
 dotenv.config();
@@ -23,6 +24,7 @@ app.use("/api/auth",loginroute);
 app.use("/api/popular",popularroute);
 app.use("/api/createauth",signuproute);
 app.use("/api/flix",onlyonflixroute);
+app.use("/api/adminupload",uploadmovies);
 
 
 app.listen(port, () => {
