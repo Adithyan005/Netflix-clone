@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
-import axios from "axios"
+import React from "react";
+import { useState } from "react";
 
-const Blockbusterupload = () => {
+const Onlyonnetflix = () => {
   const [image, setImage] = useState("");
   const [name, setName] = useState("");
   const [year, setYear] = useState("");
@@ -17,7 +17,7 @@ const Blockbusterupload = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "https://netflix-clone-backend-vas2.onrender.com/api/buster/blockbuster",
+        "https://netflix-clone-backend-vas2.onrender.com/api/flix/onlynetflix",
         {
           image,
           name,
@@ -33,21 +33,26 @@ const Blockbusterupload = () => {
       );
       console.log("inserted");
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
 
   return (
     <div>
       <div className="flex justify-center items-center p-4 font-medium">
-        <h1 className="text-2xl font-stylish">Blockbuster Movies</h1>
+        <h1 className="text-2xl font-stylish">Only on Netflix Movies</h1>
       </div>
       <div>
         <form onSubmit={handlesubmit}>
           <div className="shadow-xl py-6 bg-black w-[35vw] mx-auto rounded-xl text-white">
             <div className="p-2 flex gap-3 justify-evenly">
               <label htmlFor="">Image Link</label>
-              <input type="text" onChange={(e)=>setImage(e.target.value)} name="image" className="w-[20vw] h-8 p-1 border rounded-md"/>
+              <input
+                type="text"
+                onChange={(e) => setImage(e.target.value)}
+                name="image"
+                className="w-[20vw] h-8 p-1 border rounded-md"
+              />
             </div>
             <div className="flex p-2 gap-2 items-center justify-evenly">
               <label htmlFor="">Name</label>
@@ -143,4 +148,4 @@ const Blockbusterupload = () => {
   );
 };
 
-export default Blockbusterupload;
+export default Onlyonnetflix;
