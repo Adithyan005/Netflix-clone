@@ -39,8 +39,8 @@ const Navbar = () => {
               <img src={drop} alt="" className="w-3" />
               {isMoviedrop && (
                 <div className="text-white flex flex-col absolute top-12 left-[30vw] bg-black rounded-md">
-                  <a href="" className="hover:bg-blue px-4 py-2 rounded-md">Blockbuster</a>
-                  <a href="" className="hover:bg-blue px-4 py-2 rounded-md">Only on Netflix</a>
+                  <a href="/bk" className="hover:bg-blue px-4 py-2 rounded-md">Blockbuster</a>
+                  <a href="/onlyflix" className="hover:bg-blue px-4 py-2 rounded-md">Only on Netflix</a>
                 </div>
               )}
             </div>
