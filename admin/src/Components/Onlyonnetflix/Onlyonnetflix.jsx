@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import axios from "axios";
 
 const Onlyonnetflix = () => {
   const [image, setImage] = useState("");
