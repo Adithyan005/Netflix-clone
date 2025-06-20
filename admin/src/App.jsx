@@ -7,7 +7,7 @@ const App = () => {
   return (
       <BrowserRouter>
       <Routes>
-        <Route path="/bkupload" element={<Blockbusterupload/>}/>
+        <Route path="/" element={<Blockbusterupload/>}/>  
         <Route path="/onlyflixupload" element={<Onlyonnetflix/>}/>
       </Routes>
       </BrowserRouter>
